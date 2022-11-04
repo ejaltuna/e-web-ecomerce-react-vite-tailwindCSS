@@ -4,7 +4,7 @@ import SliderProduct from '@/components/product/SliderProduct';
 
  const Main=()=> {
   return (
-    <main className='grid grid-cols-1 md:grid-cols-2 gap-8'>
+    <main className='grid grid-cols-1 md:grid-cols-2 gap-8 md:py-8'>
     <SliderProduct/>
    <DetailProduct/>
   </main>

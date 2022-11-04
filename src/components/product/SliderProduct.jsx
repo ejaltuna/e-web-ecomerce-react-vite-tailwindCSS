@@ -22,7 +22,8 @@ export default () => {
     <section
       className="grid
          gap-4
-         md:grid-cols-4"
+         md:grid-cols-4 "
+         
     >
       <div
         className="relative
