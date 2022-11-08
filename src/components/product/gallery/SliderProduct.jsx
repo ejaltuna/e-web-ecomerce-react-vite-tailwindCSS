@@ -31,23 +31,23 @@ export default ({
     <>
       <section
         className="grid
-        gap-5
+        gap-8
         md:grid-cols-4 "
         {...props}
       >
         {isOpenModal && (
           <button
             onClick={handleClose}
-            className="ml-auto mr-2 text-right text-dark-grayish-blue md:col-span-4"
+            className="ml-auto mr-2 text-right text-white md:col-span-4"
           >
-            <CloseIcons />
+            <CloseIcons fill="#fff" />
           </button>
         )}
         <div
           className="relative
          col-span-4"
         >
-          <img src={IMGS[index]} alt="" className="aspect-[16/16] rounded-md" onClick={handleOpen} />
+          <img src={IMGS[index]} alt="" className="aspect-[16/13] md:aspect-[16/18] md:cursor-pointer  xl:aspect-[16/16]  2xl:aspect-[18/18] rounded-md 2xl:max-h-[500px] " onClick={handleOpen} />
           <div
             ref={btnslider}
             className={`
@@ -57,25 +57,22 @@ export default ({
           >
             <button
               onClick={handlePre}
-              className="grid h-10 w-10 place-items-center rounded-full bg-white"
+              className="grid h-10 w-10 place-items-center rounded-full bg-white hover:bg-slate-300"
             >
               <PreIcons />
             </button>
             <button
               onClick={handleNext}
-              className=" grid h-10 w-10 place-items-center  rounded-full bg-white"
+              className=" grid h-10 w-10 place-items-center  rounded-full bg-white hover:bg-slate-300"
             >
               <NextIcons />
             </button>
           </div>
         </div>
         {IMGS_SMALL.map((smallImg, i) => (
-          <div
-            key={smallImg}
-            onClick={() => {
-              setIndex(i);
-            }}
-            className="relative overflow-hidden rounded-md cursor-pointer gro"
+          <div key={smallImg}
+            onClick={() => setIndex(i)}
+            className="relative overflow-hidden rounded-md cursor-pointer"
           >
             <img
               src={smallImg}

@@ -1,6 +1,6 @@
 import { useState } from "react";
 import SliderProduct from "@/components/product/gallery/SliderProduct";
-import ModalSliderProduct from "@/components/product/gallery/SliderProduct";
+import ModalSliderProduct from "./SliderProduct";
 
 export default ({ IMGS, IMGS_SMALL }) => {
   const [isOpenModal, SetIsOpenModal] = useState(false);
@@ -27,8 +27,7 @@ export default ({ IMGS, IMGS_SMALL }) => {
           md:top-1/2 md:left-1/2 md:grid md:max-w-md md:-translate-x-1/2
           md:-translate-y-1/2 md:grid-cols-4 md:justify-center md:z-10 "
           />
-          <span className="backdrop-blur-[2px] bg-black/70 w-full h-full fixed top-0 left-0">
-
+          <span className="backdrop-blur-[2px] bg-black/70 w-full h-full fixed top-0 left-0" onClick={handleClose}>
           </span>
         </>
       )}

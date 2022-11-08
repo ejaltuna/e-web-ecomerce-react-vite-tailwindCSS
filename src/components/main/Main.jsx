@@ -23,7 +23,7 @@ const Main = () => {
   return (
     <main
       className="md:min-h-[calc(100vh - 88px-1px)] grid grid-cols-1 
-    gap-8 md:container md:mx-auto md:grid-cols-2 md:py-8"
+    gap-8 md:container md:mx-auto md:grid-cols-2 md:py-8 md:p-10"
     >
       <IndexImages  IMGS={IMGS} IMGS_SMALL={IMGS_SMALL} />
       <DetailProduct />

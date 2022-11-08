@@ -45,7 +45,7 @@ const NavHeader = () => {
           <button>
             <CartIcons />
           </button>
-          <img src={Avatar} alt="Imagen de perfil" className="w-9" />
+          <img src={Avatar} alt="Imagen de perfil" className="w-9 hover:border-2 hover:rounded-full hover:border-orange-primary md:cursor-pointer" />
         </div>
       </header>
       <span className="container mx-auto hidden h-[1px] w-full bg-gray-300 md:block"></span>
