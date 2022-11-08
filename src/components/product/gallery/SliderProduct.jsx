@@ -10,6 +10,7 @@ export default ({
   IMGS_SMALL = [],
   isOpenModal = false,
   handleClose = null,
+  handleOpen= null,
   ...props
 }) => {
   const btnslider = useRef(null);
@@ -46,7 +47,7 @@ export default ({
           className="relative
          col-span-4"
         >
-          <img src={IMGS[index]} alt="" className="aspect-[16/16] rounded-md" />
+          <img src={IMGS[index]} alt="" className="aspect-[16/16] rounded-md" onClick={handleOpen} />
           <div
             ref={btnslider}
             className={`
@@ -68,14 +69,22 @@ export default ({
             </button>
           </div>
         </div>
-        {IMGS_SMALL.map((smallImg) => (
-         <div className="relative overflow-hidden rounded-md"> 
-         <img
-            key={smallImg} src={smallImg} alt="" className="hidden
+        {IMGS_SMALL.map((smallImg, i) => (
+          <div
+            key={smallImg}
+            onClick={() => {
+              setIndex(i);
+            }}
+            className="relative overflow-hidden rounded-md cursor-pointer gro"
+          >
+            <img
+              src={smallImg}
+              alt=""
+              className="hidden
             rounded-md md:block"
             />
-            <span className="absolute top-0 h-full w-full hover:bg-[rgba(255,255,255,0.5)]"></span>
-            </div>
+            <span className={`absolute top-0 h-full w-full hover: hover:bg-[rgba(255,255,255,0.5)] ${i=== index && "bg-[rgba(255,255,255,0.5)] border-2 rounded-md border-orange-primary"}`}></span>
+          </div>
         ))}
         {/* <img
         src={sliderImagenSmall2}
