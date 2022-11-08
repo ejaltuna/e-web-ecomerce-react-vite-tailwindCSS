@@ -1,6 +1,7 @@
-const CartIcons = ({fill = '#69707D'}) => {
+const CartIcons = ({fill = '#69707D', ...props}) => {
   return (
       <svg 
+      {...props}
        width="22" height="20" 
      fill={fill}  
          xmlns="http://www.w3.org/2000/svg">
