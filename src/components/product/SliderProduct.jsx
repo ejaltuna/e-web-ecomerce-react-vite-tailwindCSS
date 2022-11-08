@@ -29,9 +29,9 @@ export default () => {
         className="relative
          col-span-4"
       >
-        <img src={IMGS[index]} alt="" className="aspect-[16/12]" />
+        <img src={IMGS[index]} alt="" className="aspect-[16/16] rounded-sm" />
         <div
-          className="absolute
+          className="absolute 
          top-1/2
          left-0 flex w-full -translate-y-1/2 justify-between px-2"
         >
@@ -52,25 +52,25 @@ export default () => {
       <img
         src={sliderImagenSmall1}
         alt=""
-        className="hidden
+        className="hidden rounded-md
          md:block"
       />
       <img
         src={sliderImagenSmall2}
         alt=""
-        className="hidden
+        className="hidden rounded-md
          md:block"
       />
       <img
         src={sliderImagenSmall3}
         alt=""
-        className="hidden
+        className="hidden rounded-md
          md:block"
       />
       <img
         src={sliderImagenSmall4}
         alt=""
-        className="hidden
+        className="hidden rounded-md
          md:block"
       />
     </section>
