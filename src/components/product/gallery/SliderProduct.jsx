@@ -49,7 +49,7 @@ export default ({
         >
           <img src={IMGS[index]} alt="" 
           className="object-cover aspect-[16/13] md:aspect-[16/18] md:cursor-pointer 
-          xl:aspect-[16/16] rounded-md 2xl:max-h-[500px] " 
+          xl:aspect-[16/16] rounded-md 2xl:max-h-[500px] shadow-lg shadow-gray-400" 
           onClick={handleOpen} />
           <div
             ref={btnslider}
@@ -75,13 +75,13 @@ export default ({
         {IMGS_SMALL.map((smallImg, i) => (
           <div key={smallImg}
             onClick={() => setIndex(i)}
-            className="relative overflow-hidden rounded-md cursor-pointer"
+            className="relative overflow-hidden rounded-md cursor-pointer shadow-lg shadow-gray-400"
           >
             <img
               src={smallImg}
               alt=""
               className="hidden
-            rounded-md md:block"
+            rounded-md md:block  "
             />
             <span className={`absolute top-0 h-full w-full hover: hover:bg-[rgba(255,255,255,0.5)] ${i=== index && "bg-[rgba(255,255,255,0.5)] border-2 rounded-md border-orange-primary"}`}></span>
           </div>
