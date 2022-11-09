@@ -47,7 +47,10 @@ export default ({
           className="relative
          col-span-4"
         >
-          <img src={IMGS[index]} alt="" className="object-cover aspect-[16/13] md:aspect-[16/18] md:cursor-pointer  xl:aspect-[16/16]  2xl:aspect-[18/18] rounded-md 2xl:max-h-[500px] " onClick={handleOpen} />
+          <img src={IMGS[index]} alt="" 
+          className="object-cover aspect-[16/13] md:aspect-[16/18] md:cursor-pointer 
+          xl:aspect-[16/16] rounded-md 2xl:max-h-[500px] " 
+          onClick={handleOpen} />
           <div
             ref={btnslider}
             className={`
