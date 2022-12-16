@@ -8,34 +8,30 @@ export default ({ products }) => {
     const { addCartProducts } = useContext(useCartDetails);
     const [count, setCount] = useState(1);
 
-    const decrementcount = () =>{
-        if(count === 1) return
+    const decrementcount = () => {
+        if (count === 1) return;
         setCount(count - 1);
-    }
-    const handleAddToCartDetail = () =>{
+    };
+    const handleAddToCartDetail = () => {
         addCartProducts({
             id: products.id,
             img: products.images_small[0],
-            discountPrice: (
-                products.price *
-                (1 - products.discount)
-            ).toFixed(2),
+            discountPrice: (products.price * (1 - products.discount)).toFixed(
+                2
+            ),
             title: products.title,
             amount: count === 0 ? 1 : count,
-        })
+        });
         setCount(0);
-    }
-  
+    };
+
     return (
         <section className="container mx-auto my-auto px-4">
-            <small className="font-bold uppercase text-orange-primary ">
+            <small className="font-bold uppercase text-orange-primary z-10">
                 {products.subtitle}
             </small>
             <h2 className="mb-4 text-3xl font-bold">{products.title}</h2>
-            <p
-                className="mb-4 text-dark-grayish-blue
-      "
-            >
+            <p className="mb-4 text-dark-grayish-blue">
                 {products.descProduct}
             </p>
 
@@ -54,14 +50,17 @@ export default ({ products }) => {
 
             <div className="grid grid-cols-3 gap-4 md:grid-cols-[1fr_1.5fr] md:items-center">
                 <div className="col-span-3 mb-4 flex items-center justify-around rounded-md bg-orange-200 font-bold md:col-span-1 md:mb-0">
-                    <button  onClick={decrementcount}
-                     className="bg-orange-200 p-2  text-3xl text-orange-primary transition-all hover:text-orange-800">
+                    <button
+                        onClick={decrementcount}
+                        className="bg-orange-200 p-2  text-3xl text-orange-primary transition-all hover:text-orange-800"
+                    >
                         -
                     </button>
                     <span className="">{count}</span>
-                    <button 
-                    onClick={()=> setCount(count + 1)}
-                    className="bg-orange-200  p-2  text-3xl  text-orange-primary transition-all hover:text-orange-800">
+                    <button
+                        onClick={() => setCount(count + 1)}
+                        className="bg-orange-200  p-2  text-3xl  text-orange-primary transition-all hover:text-orange-800"
+                    >
                         +
                     </button>
                 </div>

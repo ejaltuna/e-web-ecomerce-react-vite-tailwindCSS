@@ -38,7 +38,7 @@ const NavHeader = () => {
                 <nav
                     className={`font-bold md:static md:mr-auto md:flex md:h-auto md:flex-row md:gap-4 md:p-0  ${
                         isOpenMenu
-                            ? "absolute  top-0 left-0 z-10 flex h-full w-4/5 flex-col gap-y-4 bg-white  p-4"
+                            ? "absolute  top-0 -left-0 z-20 flex h-full w-4/5 flex-col gap-y-4 bg-blue-400  p-4"
                             : "hidden"
                     }`}
                 >
